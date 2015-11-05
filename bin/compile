@@ -138,3 +138,5 @@ web: ./approot/web --server.urls http://+:\$PORT
 EOT
 	fi
 fi
+
+#TODO see https://github.com/noliar/dotnet-buildpack/blob/master/bin/compile
