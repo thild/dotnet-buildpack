@@ -20,12 +20,9 @@ function export_env_dir() {
   if [ -d "$env_dir" ]; then
     echo "$env_dir"
     for e in $(ls $env_dir); do
-      echo "$e"
       echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
-      export "$e=$(cat $env_dir/$e)"
+      echo "$e=$(cat $env_dir/$e)"
       :
     done
   fi
-  echo "UNSTABLE_TOOLCHAIN"
-  echo $UNSTABLE_TOOLCHAIN
 }
