@@ -23,5 +23,4 @@ function export_env_dir() {
       :
     done
   fi
-  echo "################### ${1}"
 }
