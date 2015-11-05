@@ -18,7 +18,7 @@ source $BUILDPACK_DIR/bin/util
 
 export_env_dir ${ENV_DIR}
 
-: ${MONO_VERSION:="4.0.1.44"}
+: ${MONO_VERSION:="4.2.0.207"}
 : ${MONO_DOWNLOAD_LOCATION:="https://github.com/friism/mono-builder/releases/download/v${MONO_VERSION}/mono-${MONO_VERSION}.tar.gz"}
 : ${LIBUV_VERSION:="1.6.0"}
 : ${NODE_VERSION:="0.12.2"}
