@@ -74,7 +74,7 @@ then
 	curl https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz -Ls \
 		| tar xz -C ${NODE_PATH}
 	export PATH="${NODE_PATH}/node-v${NODE_VERSION}-linux-x64/bin:${PATH}"
-	#npm install -g bower gulp
+	npm install -g bower gulp
 fi
 
 # Install DNX
