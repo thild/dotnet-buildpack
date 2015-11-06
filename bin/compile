@@ -66,15 +66,15 @@ cp -r ~/.config ${BUILD_DIR}/.
 # TODO: This test doesn't seen to actually work
 # TODO: Maybe just run `npm install -g` and if anything is missing, install it after
 echo "Install node?"
-if [[ -n $(find . -type f -iname package.json -o -iname bower.json -o -iname gruntfile.js) ]]
+if [[ -n $(find ${SRC_DIR} -type f -iname package.json -o -iname bower.json -o -iname gulpfile.js) ]]
 then
         echo "Installing node..."
-	# Install Node and grunt-cli
+	# Install Node
 	NODE_PATH=`mktemp -d`
 	curl https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz -Ls \
 		| tar xz -C ${NODE_PATH}
 	export PATH="${NODE_PATH}/node-v${NODE_VERSION}-linux-x64/bin:${PATH}"
-	npm install -g grunt-cli bower gulp
+	npm install -g bower gulp
 fi
 
 # Install DNX
