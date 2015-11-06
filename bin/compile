@@ -65,8 +65,10 @@ cp -r ~/.config ${BUILD_DIR}/.
 
 # TODO: This test doesn't seen to actually work
 # TODO: Maybe just run `npm install -g` and if anything is missing, install it after
+echo "Install node?"
 if [[ -n $(find . -type f -iname package.json -o -iname bower.json -o -iname gruntfile.js) ]]
 then
+        echo "Installing node..."
 	# Install Node and grunt-cli
 	NODE_PATH=`mktemp -d`
 	curl https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz -Ls \
