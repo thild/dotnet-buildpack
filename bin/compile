@@ -23,8 +23,8 @@ export_env_dir ${ENV_DIR}
 : ${LIBUV_VERSION:="1.6.0"}
 : ${NODE_VERSION:="4.2.1"}
 : ${DNVM_BRANCH:="v1.0.0-rc1-final"}
-#: ${DNX_VERSION:="1.0.0-rc1-final"}
-: ${DNX_VERSION:="latest"}
+: ${DNX_VERSION:="1.0.0-rc1-final"}
+#: ${DNX_VERSION:="latest"}
 
 # REMARK: https://github.com/aspnet/dnx/pull/2620 and https://github.com/aspnet/aspnet-docker/issues/80
 [ -z "$MONO_THREADS_PER_CPU" ] && export MONO_THREADS_PER_CPU=2000
